@@ -5,12 +5,28 @@
  *
  *  Copyright (c) 2012 Raphael Kuchta
  *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *****************************************************************************
  *
  *  File:   db_query.php                Date:     2012-01-16
  *  Author: Raphael Kuchta              Version:  12.01.16
  *
  *****************************************************************************/
 
+include_once "db_config.php";
 include_once "database.php";
 
 // first check if all parameters are set (else we have no need to proceed)
@@ -26,14 +42,8 @@ if(isset($_POST['db_lang_1'], $_POST['db_lang_2'], $_POST['sql_limit'],
   $sSqlLimit = intval($_POST['sql_limit'], 10);
   $sSqlOffset = intval($_POST['sql_offset'], 10);
   
-
-  // database parameters
-  $sHost = "localhost";
-  $sDbUser = "level1";
-  $sDbPasswd = "123456";
-  $sDatabase = "voka";
-
   // get new db object
+  // (the parameters are stored in the db_config.php file)
   $oDB = new DataBase($sHost, $sDbUser, $sDbPasswd, $sDatabase);
 
   $oDB->connect();  

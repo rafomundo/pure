@@ -1,16 +1,32 @@
 /*****************************************************************************
  *
- *  "Pure" vocabulary with focus on mobile devices.
- *  It loads vocables from a csv file or directly from the
+ *  "Pure" vocabulary - with focus on mobile devices.
+ *
+ *  Copyright (c) 2012 Raphael Kuchta
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *****************************************************************************
+ *
+ *  Functionality: It loads vocables from a csv file or directly from the
  *  MySQL DB (with the help of some PHP scripts) and stores
- *  them is a local SQLite DB (to minimize server load and have a better
+ *  them in a local SQLite DB (to minimize server load and have a better
  *  reaction time)
  *  For the reason that the Firefox web browser is not (and probably 
  *  never will be) supporting local databases like SQLite, the queries 
  *  have to be done with PHP scripts directly on the server in this case.
- *
- *  Copyright (c) 2012 Raphael Kuchta
- *
  *
  *  File:   pure.js                     Date:     2011-05-17
  *  Author: Raphael Kuchta              Version:  12.01.17
