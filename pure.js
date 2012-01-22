@@ -47,7 +47,7 @@
 /** simple string trim function */
 String.prototype.trim = function(){   
   return this.replace(/(^\s*)|(\s*$)/g, '');
-}
+};
 
 
 /**
@@ -93,7 +93,7 @@ function DataBase() {
     $("#load_more_button").hide();
     
     this.search(sSearchTerm);
-  }
+  };
   
   /**
    *  Load more results.
@@ -110,7 +110,7 @@ function DataBase() {
       
     // perform a search with new offset
     this.search(this.sLastSearchTerm);
-  }
+  };
   
   /**
    *  Check if there are more results that could be displayed.
@@ -121,7 +121,7 @@ function DataBase() {
     if(this.iTotalResults > (this.iSqlLimit + this.iSqlOffset)) {
       $("#load_more_button").show();
     }
-  }
+  };
   
   /**
    *  Print / render the header of the result list.
@@ -135,7 +135,7 @@ function DataBase() {
   $("#results").append('<br /><div class="ui-grid-a"><div class="ui-block-a"><h1>' 
     + this.sDisplayLang1 + ' </h1></div><div class="ui-block-b"><span class="text_right"><h1>' 
     + this.sDisplayLang2 + '</h1></span></div></div>');
-  }
+  };
 }
 
 
@@ -213,7 +213,7 @@ function OnlineDataBase() {
         thisObj.showLoadMoreButton();
       }, "json"
     );
-  }
+  };
 }
 // = OnlineDataBase extends DataBase
 OnlineDataBase.prototype = new DataBase;
@@ -291,7 +291,7 @@ function OfflineDataBase() {
         }
       );
     });
-  }
+  };
   
   /**
    *  Load the vocabulary and init the database 
@@ -336,7 +336,7 @@ function OfflineDataBase() {
         }
       );
     });
-  }
+  };
 
   /**
    *  Import data from a csv file to a local SQLite database.
@@ -362,7 +362,7 @@ function OfflineDataBase() {
         }
       });
     });
-  }
+  };
 }
 // OfflineDataBase extends DataBase
 OfflineDataBase.prototype = new DataBase;
